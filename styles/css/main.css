@@ -6942,10 +6942,18 @@ template {
   display: none;
 }
 
-body {
+html {
   font-size: 20px;
+}
+
+body {
   font-family: "myriad-pro", sans-serif;
   font-weight: 300;
+  color: #283b49;
+}
+
+p {
+  line-height: calc(1rem + 0.5rem);
 }
 
 h1,
@@ -6956,6 +6964,14 @@ h5,
 h6 {
   font-weight: 700;
   font-style: italic;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
 }
 
 .nav {
@@ -6991,4 +7007,96 @@ h6 {
 .header {
   background-color: #f5f8fa;
   padding: 0.75rem 0;
+}
+.header .header__content {
+  padding-left: 7.5rem;
+}
+.header .header__title {
+  max-width: 75%;
+  margin: 0 0 1.25rem 0;
+}
+.header .header__text {
+  max-width: 80%;
+  text-align: justify;
+  line-height: calc(1rem + 0.5rem);
+}
+.header .header-cta__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #f38723;
+}
+.header .header-cta__image {
+  margin-right: 0.75rem;
+  filter: drop-shadow(0px 3px 15px rgba(199, 101, 10, 0.17));
+}
+
+.we .we__article {
+  max-width: 70%;
+}
+.we .we__title {
+  max-width: 50%;
+}
+
+.link {
+  color: #f38723;
+  text-decoration: underline;
+}
+
+.cotizador {
+  background-color: #f38723;
+  color: #fff;
+  padding: 2.25rem 0;
+  border-radius: 0.5rem;
+}
+.cotizador .cotizador__content, .cotizador .cotizador-form {
+  width: 75%;
+}
+.cotizador .cotizador-form__input, .cotizador .cotizador-form__button {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  border: 0;
+}
+.cotizador .cotizador-form__button {
+  background-color: #2f76a5;
+  color: #fff;
+}
+
+.certification {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.mb-m {
+  margin-bottom: 0.75rem;
+}
+
+.mt-m {
+  margin-top: 0.75rem;
+}
+
+.mb-l {
+  margin-bottom: 1.125rem;
 }
