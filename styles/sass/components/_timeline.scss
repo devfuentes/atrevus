@@ -1,0 +1,32 @@
+.timeline {
+  padding: 2.25rem 0;
+
+  & .timeline__years {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .timeline__year {
+    font-size: 1rem;
+    opacity: 0.5;
+    color: $primary-color;
+    margin-bottom: 2.25rem;
+    cursor: pointer;
+    &.timeline__year--active {
+      opacity: 1;
+    }
+  }
+
+  & .timeline__image {
+    border-radius: 0.75rem;
+  }
+
+  & .timeline__content {
+    display: none;
+    &.timeline__content--active {
+      display: initial;
+    }
+  }
+}

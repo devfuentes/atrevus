@@ -1,0 +1,13 @@
+.legal {
+  background-color: $light-gray;
+  padding: 1.75rem 0;
+  font-size: 0.7rem;
+  & .legal-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  & .legal-list__item {
+    margin-bottom: 0.5rem;
+  }
+}

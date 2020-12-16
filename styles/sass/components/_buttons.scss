@@ -1,4 +1,50 @@
 .link {
   color: $primary-color;
   text-decoration: underline;
+  &.link--arrow {
+    padding-left: 1.5rem;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url(../../img/arrow-icon.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 1rem;
+      height: 1rem;
+      animation: up-down infinite 1s ease-in-out;
+    }
+  }
+}
+
+.btn {
+  color: $text-color;
+  border: solid 1px $text-color;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  animation: all 1s ease-in;
+  font-weight: 400;
+  &:hover {
+    color: $white;
+    background-color: $text-color;
+    text-decoration: none;
+  }
+
+  &.btn--orange {
+    background-color: $primary-color;
+    color: $white;
+    border: 0;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    top: -4px;
+  }
+  100% {
+    top: 16px;
+  }
 }

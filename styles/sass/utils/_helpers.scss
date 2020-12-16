@@ -10,22 +10,36 @@
   margin-top: 0;
 }
 
-.mb-0 {
-  margin-bottom: 0;
+.mt-m {
+  margin-top: 0.75rem;
+}
+
+.mt-lg {
+  margin-top: 2.25rem;
 }
 
 .justify-text {
   text-align: justify;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .mb-m {
   margin-bottom: 0.75rem;
 }
 
-.mt-m {
-  margin-top: 0.75rem;
-}
-
 .mb-l {
   margin-bottom: 1.125rem;
+}
+
+.mb-lg {
+  margin-bottom: 2.25rem;
+}
+
+// COLORES
+
+.text-green {
+  color: $green-color;
 }

@@ -4,6 +4,11 @@
 
   & .nav-menu {
     width: 100%;
+    display: none;
+
+    @include response-min($l) {
+      display: initial;
+    }
   }
 
   & .nav-menu__list {

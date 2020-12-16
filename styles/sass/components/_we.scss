@@ -1,9 +1,16 @@
 .we {
+  &.we--black {
+    background-color: $text-color;
+    color: $white;
+  }
   & .we__article {
     max-width: 70%;
   }
 
   & .we__title {
     max-width: 50%;
+    &.we__title--sm {
+      max-width: 40%;
+    }
   }
 }

@@ -10,10 +10,16 @@
 // LAYOUT
 @import "layout/navegacion";
 @import "layout/header";
+@import "layout/header-page";
+@import "layout/footer";
+
 // COMPONENTS
 @import "components/we";
 @import "components/buttons";
 @import "components/cotizador";
 @import "components/certification";
+@import "components/timeline";
+@import "components/icon-list";
+@import "components/legal";
 //HELPERS
 @import "utils/helpers";
