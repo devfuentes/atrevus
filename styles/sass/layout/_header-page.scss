@@ -2,9 +2,42 @@
   background-color: $main-background;
   padding: 3.75rem 0;
   overflow: hidden;
+  position: relative;
+
+  & .header-page__arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+    animation: scroll infinite 1s ease-in-out;
+  }
 
   & .header-page__image {
     z-index: 1;
+  }
+
+  & .header-page__image {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      background-position: center;
+      width: 150px;
+      background-size: contain;
+      height: 150px;
+      position: absolute;
+      z-index: 2;
+    }
+    &::before {
+      top: 0;
+      left: 2rem;
+      background-image: url(../../img/sustentabilidad-icon.svg);
+    }
+    &::after {
+      bottom: 0;
+      right: 1rem;
+      background-image: url(../../img/sustentabilidad-icon2.svg);
+    }
   }
 
   & .header-page__overlay {
@@ -30,5 +63,14 @@
     &:last-of-type {
       margin-bottom: 1.25rem;
     }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    margin-top: -4px;
+  }
+  100% {
+    margin-top: 8px;
   }
 }
