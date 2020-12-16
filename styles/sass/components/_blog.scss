@@ -7,7 +7,19 @@
     color: $text-color;
   }
   & .blog__title {
+    font-weight: $bold-font;
+    font-style: italic;
     font-size: 1rem;
+    color: $text-color;
+  }
+
+  & .blog__category {
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  & .blog__text {
     padding: 1rem;
   }
 

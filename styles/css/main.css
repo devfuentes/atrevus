@@ -7060,6 +7060,12 @@ h6 {
   overflow: hidden;
   position: relative;
 }
+.header-page .header-page__category {
+  color: #f6be00;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  display: block;
+}
 .header-page .header-page__arrow {
   position: absolute;
   left: 50%;
@@ -7091,6 +7097,12 @@ h6 {
   bottom: 0;
   right: 1rem;
   background-image: url(../../img/sustentabilidad-icon2.svg);
+}
+.header-page .header-page__image.header-page__image--blog::before {
+  background-image: url(../../img/blog-icon.svg);
+}
+.header-page .header-page__image.header-page__image--blog::after {
+  background-image: url(../../img/blog-icon2.svg);
 }
 .header-page .header-page__overlay {
   position: relative;
@@ -7323,7 +7335,17 @@ h6 {
   color: #283b49;
 }
 .blog .blog__title {
+  font-weight: 700;
+  font-style: italic;
   font-size: 1rem;
+  color: #283b49;
+}
+.blog .blog__category {
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.blog .blog__text {
   padding: 1rem;
 }
 .blog .blog__figure {
@@ -7382,4 +7404,12 @@ h6 {
 
 .text-green {
   color: #7cad14;
+}
+
+.text-yellow {
+  color: #f6be00;
+}
+
+.d-inline-block {
+  display: inline-block;
 }

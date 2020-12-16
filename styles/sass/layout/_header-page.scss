@@ -4,6 +4,13 @@
   overflow: hidden;
   position: relative;
 
+  & .header-page__category {
+    color: $yellow-color;
+    font-weight: $regular-font;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
   & .header-page__arrow {
     position: absolute;
     left: 50%;
@@ -37,6 +44,16 @@
       bottom: 0;
       right: 1rem;
       background-image: url(../../img/sustentabilidad-icon2.svg);
+    }
+
+    // VARIACION PARA EL BLOG
+    &.header-page__image--blog {
+      &::before {
+        background-image: url(../../img/blog-icon.svg);
+      }
+      &::after {
+        background-image: url(../../img/blog-icon2.svg);
+      }
     }
   }
 
