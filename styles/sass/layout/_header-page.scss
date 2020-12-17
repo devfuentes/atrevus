@@ -23,6 +23,23 @@
     z-index: 1;
   }
 
+  & .header-page__date {
+    padding-left: 1.5rem;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-position: center;
+      background-size: contain;
+      background-image: url(../../img/reloj.svg);
+    }
+  }
+
   & .header-page__image {
     position: relative;
     &::before,
@@ -49,6 +66,17 @@
     // VARIACION PARA EL BLOG
     &.header-page__image--blog {
       &::before {
+        background-image: url(../../img/blog-icon.svg);
+      }
+      &::after {
+        background-image: url(../../img/blog-icon2.svg);
+      }
+    }
+
+    // VARIACION PARA EL COTIZADOR
+    &.header-page__image--cotizador {
+      &::before {
+        display: none;
         background-image: url(../../img/blog-icon.svg);
       }
       &::after {

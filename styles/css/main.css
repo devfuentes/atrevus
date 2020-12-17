@@ -7076,6 +7076,22 @@ h6 {
 .header-page .header-page__image {
   z-index: 1;
 }
+.header-page .header-page__date {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.header-page .header-page__date:after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-size: contain;
+  background-image: url(../../img/reloj.svg);
+}
 .header-page .header-page__image {
   position: relative;
 }
@@ -7102,6 +7118,13 @@ h6 {
   background-image: url(../../img/blog-icon.svg);
 }
 .header-page .header-page__image.header-page__image--blog::after {
+  background-image: url(../../img/blog-icon2.svg);
+}
+.header-page .header-page__image.header-page__image--cotizador::before {
+  display: none;
+  background-image: url(../../img/blog-icon.svg);
+}
+.header-page .header-page__image.header-page__image--cotizador::after {
   background-image: url(../../img/blog-icon2.svg);
 }
 .header-page .header-page__overlay {
@@ -7163,6 +7186,74 @@ h6 {
   margin-bottom: 1rem;
 }
 
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form .form__row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.125rem;
+}
+.form .form__label {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form .form__input {
+  width: 100%;
+  border-radius: 15px;
+  border: solid 1px #283b49;
+  padding: 0.5rem;
+  font-family: "myriad-pro", sans-serif;
+  font-weight: 300;
+}
+.form .form__error {
+  color: #f32323;
+  font-size: 0.8rem;
+  margin: 0.2rem 0 0 0;
+}
+.form .form__input-submit--loading {
+  animation: loading infinite 1s ease-in;
+}
+
+.form-card {
+  width: 48%;
+  border-radius: 15px;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+.form-card.form-card--active {
+  border: solid 1px #7cad14;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
+}
+.form-card:hover {
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
+  border: solid 1px #7cad14;
+}
+.form-card .form-card__title {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 .we.we--black {
   background-color: #283b49;
   color: #fff;
@@ -7412,4 +7503,9 @@ h6 {
 
 .d-inline-block {
   display: inline-block;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
 }

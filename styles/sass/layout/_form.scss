@@ -1,0 +1,74 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  & .form__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.125rem;
+  }
+
+  & .form__label {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  & .form__input {
+    width: 100%;
+    border-radius: 15px;
+    border: solid 1px $text-color;
+    padding: 0.5rem;
+    font-family: $primary-font;
+    font-weight: $light-font;
+  }
+
+  & .form__error {
+    color: $error;
+    font-size: 0.8rem;
+    margin: 0.2rem 0 0 0;
+  }
+
+  & .form__input-submit--loading {
+    animation: loading infinite 1s ease-in;
+  }
+}
+
+.form-card {
+  width: 48%;
+  border-radius: 15px;
+  padding: 1rem;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  &.form-card--active {
+    border: solid 1px $green-color;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
+    border: solid 1px $green-color;
+  }
+  & .form-card__title {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

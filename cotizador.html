@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atrevus | Financiamos tu historia</title>
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ipr3lsk.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="ed-container s-cross-center">
+          <div class="ed-item s-30">
+            <img
+              src="img/logo-atrevus.svg"
+              alt="Logotipo Atrevus"
+              class="nav__image"
+            />
+          </div>
+          <div class="ed-item s-70 s-main-end">
+            <nav class="nav-menu">
+              <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="">Productos</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="sustentabilidad.html"
+                    >Sustentabilidad</a
+                  >
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link active" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="ingresar.html">Ingresar</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link hilight" href="cotizador.html"
+                    >Cotizador</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header-page">
+        
+        <div class="ed-container s-cross-center">
+          <div class="ed-item s-100 l-50">
+            
+            <h1 class="subtitle header-page__title text-green">
+              Calcula tu crédito
+            </h1>
+
+            <form class="form" id="form" action="">
+              <input checked="true" id="radioPersonal" type="radio" name="tipoCredito" value="1" class="hidden">
+              <input id="radioEmpresarial" type="radio" name="tipoCredito" value="2" class="hidden">
+              <div class="form__row">
+                <label class="form-card form-card--active" for="radioPersonal">
+                  <img class="form-card__image" src="img/user.svg" alt="Icono usuario credito personal">
+                  <p class="form-card__title">Crédito personal</p>
+                </label>
+                <label class="form-card" for="radioEmpresarial">
+                  <img class="form-card__image" src="img/icon-empresarial.svg" alt="Icono credito empresarial">
+                  <p class="form-card__title">Crédito empresarial</p>
+                </label>
+              </div>
+
+              <div class="form__row" id="grupo__nombre">
+                <label class="form__label" for="nombre">Nombre o razón social *</label>
+                <input required name="nombre" class="form__input" type="text">
+                <p class="form__error"></p>
+              </div>
+
+              <div class="form__row" id="grupo__monto">
+                <label class="form__label" for="cantidad">¿Cuánto necesitas? *</label>
+                <input required name="monto" class="form__input" type="text" placeholder="De $10,000 a $300,000">
+                <p class="form__error"></p>
+              </div>
+
+              <div class="form__row">
+                <label class="form__label" for="plazo">¿A qué plazo quieres pagarlo? *</label>
+                <!-- <input required name="monto" class="form__input" type="text" placeholder="De $10,000 a $300,000"> -->
+
+                <select class="form__input" name="plazo" id="plazo">
+                  <option value="3">3 meses</option>
+                  <option value="6">6 meses</option>
+                  <option value="12">12 meses</option>
+                  <option value="24">24 meses</option>
+                  <option value="24">48 meses</option>
+                </select>
+              </div>
+
+              <div class="form__row">
+                <input id="formSubmit" type="submit" value="Enviar" class="btn btn--orange">
+                <p class="form__error" id="error-general"></p>
+              </div>
+              
+            </form>
+            
+          </div>
+          <div
+            class="ed-item s-100 l-50 l-cross-center l-main-center header-page__image header-page__image--cotizador"
+          >
+            <img
+              src="img/cotizador.png"
+              alt="Atrevus financiamos tu historia"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    </section>
+
+    <footer class="footer">
+      <div class="ed-container m-cross-start">
+        <div class="ed-item m-25">
+          <img
+            class="footer__header"
+            src="img/logo-atrevus-white.svg"
+            alt="Logotipo Atrevus"
+          />
+          <p class="footer__text">
+            Torre Zero / Juárez Nte. 1001Piso 8 Interior 801 Col. San Francisco
+            Coaxusco Metepec, Estado de México Tel. 722 280 3395
+          </p>
+        </div>
+        <div class="ed-item m-15">
+          <h3 class="footer__title footer__header m-cross-center">Legal</h3>
+          <ul class="footer-list">
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="">Términos y condiciones</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="">Aviso de privacidad</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href=""
+                >Buró de entidades financiaras
+              </a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="">UNE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ed-item m-25 m-cross-center">
+          <h3 class="footer__title footer__header m-cross-center">CONDUSEF</h3>
+          <p class="footer__text">
+            Comisión Nacional para la Protección y Defensa de los Usuarios de
+            Servicios Financieros
+          </p>
+          <p class="footer__text m-cross-center">
+            Centro de Atención Telefónica <br />
+            Teléfono: (55) 5340 0999 / 800 999 · 8080
+            <a class="footer-list__link" href="https://www.condusef.gob.mx/"
+              >www.condusef.gob.mx</a
+            >
+          </p>
+        </div>
+        <div class="ed-item m-35">
+          <h3 class="footer__title footer__header m-cross-center">
+            Buró de entidades financieras
+          </h3>
+          <p class="footer__text m-cross-center">
+            El buró de Entidades Financieras contiene información de JMMETEPEC
+            S.A. de C.V. SOFOM E.N.R. sobre nuestro desempeño frente a los
+            Usuarios, por la prestación de productos y servicios.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</html>
