@@ -22,3 +22,34 @@
     color: $white;
   }
 }
+
+.cotizador-response {
+  & .cotizador-response__title,
+  & .cotizador-response__monto {
+    margin: 0;
+    padding: 0;
+  }
+
+  & .cotizador-response__values {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  & .cotizador-response__heading {
+    font-weight: $bold-font;
+    margin: 0;
+  }
+
+  & .cotizador-response__cta {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    a {
+      margin-right: 1rem;
+    }
+  }
+}

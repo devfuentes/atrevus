@@ -7337,6 +7337,30 @@ h6 {
   color: #fff;
 }
 
+.cotizador-response .cotizador-response__title, .cotizador-response .cotizador-response__monto {
+  margin: 0;
+  padding: 0;
+}
+.cotizador-response .cotizador-response__values {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.cotizador-response .cotizador-response__heading {
+  font-weight: 700;
+  margin: 0;
+}
+.cotizador-response .cotizador-response__cta {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cotizador-response .cotizador-response__cta a {
+  margin-right: 1rem;
+}
+
 .certification {
   display: flex;
   align-items: center;
