@@ -1,0 +1,50 @@
+.testimonials {
+  background-color: $text-color;
+  width: 100%;
+  padding: 2.25rem 0;
+  color: $white;
+
+  .testimonials__title {
+    width: 80%;
+  }
+
+  & .testimonial {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .testimonial__image {
+    width: 40%;
+    img {
+      width: 100%;
+      border-radius: 100%;
+    }
+  }
+
+  & .testimonial__content {
+    width: 55%;
+  }
+
+  & .testimonial__quote {
+    color: $primary-color;
+    line-height: calc(1em + 5px);
+    margin-bottom: 0;
+  }
+
+  & .testimonial__author {
+    font-size: 0.75rem;
+    margin: 1rem 0 0 0;
+  }
+
+  & .testimonial__company {
+    font-weight: $bold-font;
+    font-size: 0.75rem;
+    margin-top: -0.5em;
+  }
+
+  & .testimonial__btn {
+    font-size: 0.7rem;
+  }
+}

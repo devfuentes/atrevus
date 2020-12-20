@@ -1,0 +1,18 @@
+.video {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .video__close {
+    position: absolute;
+    top: 10%;
+    right: 5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}

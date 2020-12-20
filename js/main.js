@@ -1,4 +1,6 @@
 window.addEventListener("load", function () {
+  // Iniciar y cerrar video
+
   var date = document.getElementsByClassName("timeline__year");
   var imageContainer = document.getElementById("imageContainer");
 

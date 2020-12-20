@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://use.typekit.net/ipr3lsk.css" />
   </head>
   <body>
+    <div class="video hidden" id="videoContainer">
+      <p class="video__close" id="closeVideo">Cerrar X</p>
+      <video width="600" height="320" controls>
+        <source src="video/intro.mp4" type="video/mp4" />
+      </video>
+    </div>
     <header>
       <div class="nav">
         <div class="ed-container s-cross-center">
@@ -63,7 +69,7 @@
                   justos, profesionales y sobretodo humanos.
                 </p>
                 <div class="header-cta">
-                  <a href="" class="header-cta__link">
+                  <a href="" class="header-cta__link" id="playVideo">
                     <img
                       src="img/play-icon.svg"
                       alt="Botón para reproducir video Atrevus"
@@ -85,7 +91,7 @@
     <section class="we mb-0 mt-0">
       <div class="ed-container full">
         <div class="ed-item m-40 pr-0 pl-0">
-          <img src="img/nosotros.jpg" alt="" />
+          <img class="we__image" src="img/nosotros.jpg" alt="" />
         </div>
         <div class="ed-item m-60 m-cross-center m-main-center">
           <article class="we__article">
@@ -98,13 +104,47 @@
               piedra para que traigas a la vida tu proyecto, claro que te
               pediremos pasión y compromiso.
             </p>
-            <a class="link" href=""> Conoce más sobre Atrevus </a>
+            <a class="link" href="nosotros.html"> Conoce más sobre Atrevus </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="testimonials mb-0">
+      <div class="ed-container">
+        <div class="ed-item s-100 l-50">
+          <h3 class="subtitle text-green testimonials__title">
+            Sueños que se materializaron gracias a Atrevus:
+          </h3>
+          <p class="justify-text">
+            Sabemos que los tiempos son difíciles, pero en Atrevus siempre te
+            brindaremos una solución y el apoyo que tu empresa necesita tanto en
+            momentos de estabilidad, como en momentos de crisis. Atrévete a
+            cumplir tus sueños; nosotros financiamos tu historia.
+          </p>
+        </div>
+        <div class="ed-item s-100 l-50">
+          <div class="testimonial">
+            <div class="testimonial__image">
+              <img src="img/flising.jpg" alt="Testiminial Atrevus Flising" />
+            </div>
+            <div class="testimonial__content">
+              <h4 class="testimonial__quote justify-text">
+                "Lo que más disfruté fue a mi asesor, que siempre estuvo ahí
+                para apoyarme en todo"
+              </h4>
+              <p class="testimonial__author">Issac Reséndiz Curiel</p>
+              <p class="testimonial__company">Flising</p>
+              <a href="" class="testimonial__btn btn btn--orange">
+                Ver testimonial</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-lg">
       <div class="ed-container cotizador">
         <div class="ed-item m-50 m-main-center m-cross-center">
           <div class="cotizador__content">
@@ -118,7 +158,7 @@
           </div>
         </div>
         <div class="ed-item m-50 m-cross-center m-main-center">
-          <form action="" class="cotizador-form">
+          <form action="cotizador.html" class="cotizador-form">
             <input
               class="cotizador-form__input"
               type="text"
@@ -221,5 +261,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/inicio.js"></script>
   </body>
 </html>

@@ -3,6 +3,11 @@
     background-color: $text-color;
     color: $white;
   }
+
+  & .we__image {
+    height: 100%;
+  }
+
   & .we__article {
     max-width: 70%;
   }

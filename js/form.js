@@ -16,6 +16,18 @@
   var cat = document.getElementById("cat");
   var tasa = document.getElementById("tasa");
 
+  // Variables quiero que me llamen
+  var callMe = document.getElementById("callMe");
+  var callMeForm = document.getElementById("callMeForm");
+
+  function showContact(e) {
+    e.preventDefault();
+    cotizadorResponse.classList.add("hidden");
+    callMeForm.classList.remove("hidden");
+  }
+
+  callMe.addEventListener("click", showContact, false);
+
   var inputs = document.querySelectorAll("#form input");
   const API =
     "https://atrevuscreditdev.sgawebservices.net/SimuladorClienteJson/";
