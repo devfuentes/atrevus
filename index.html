@@ -6,6 +6,18 @@
     <title>Atrevus | Financiamos tu historia</title>
     <link rel="stylesheet" href="styles/css/main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ipr3lsk.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="video hidden" id="videoContainer">
@@ -33,8 +45,14 @@
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="nosotros.html">Nosotros</a>
                 </li>
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="">Productos</a>
+                <li class="nav-menu__item nav-menu__item-submenu">
+                  <a class="nav-menu__link nav-menu__link--submenu" href=""
+                    >Productos</a
+                  >
+                  <div class="nav-menu__submenu">
+                    <a href="credito-personal.html">Crédito personal</a>
+                    <a href="credito-empresarial.html">Crédito empresarial</a>
+                  </div>
                 </li>
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="sustentabilidad.html"
@@ -124,20 +142,47 @@
           </p>
         </div>
         <div class="ed-item s-100 l-50">
-          <div class="testimonial">
-            <div class="testimonial__image">
-              <img src="img/flising.jpg" alt="Testiminial Atrevus Flising" />
+          <div class="testimonial-slider">
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/flising.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "Lo que más disfruté fue a mi asesor, que siempre estuvo ahí
+                    para apoyarme en todo"
+                  </h4>
+                  <p class="testimonial__author">Issac Reséndiz Curiel</p>
+                  <p class="testimonial__company">Flising</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="testimonial__content">
-              <h4 class="testimonial__quote justify-text">
-                "Lo que más disfruté fue a mi asesor, que siempre estuvo ahí
-                para apoyarme en todo"
-              </h4>
-              <p class="testimonial__author">Issac Reséndiz Curiel</p>
-              <p class="testimonial__company">Flising</p>
-              <a href="" class="testimonial__btn btn btn--orange">
-                Ver testimonial</a
-              >
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/flising.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "Este es un nuevo mensaje del slider"
+                  </h4>
+                  <p class="testimonial__author">Issac Reséndiz Curiel</p>
+                  <p class="testimonial__company">Flising</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -261,6 +306,16 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/inicio.js"></script>
   </body>
 </html>

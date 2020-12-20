@@ -1,4 +1,17 @@
 window.addEventListener("load", function () {
+  // SLIDER
+  // SLIDER
+  $(".testimonial-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    pauseOnHover: true,
+  });
+  // END SLIDER
+  // END SLIDER
+
   // Iniciar y cerrar video
   var playVideo = document.getElementById("playVideo");
   var videoContainer = document.getElementById("videoContainer");
