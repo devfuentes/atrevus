@@ -20,6 +20,26 @@
     />
   </head>
   <body>
+    <div class="popup hidden" id="popUpContainer">
+      <div class="popup__container">
+        <div class="popup__header">
+          <img
+            id="popUpIcon"
+            src="img/closeIcon.svg"
+            alt="Boton cerrar popup"
+          />
+        </div>
+        <div class="popup__content">
+          <div class="popup__image">
+            <img class="popup__img" src="img/great-place-to-work.jpg" alt="" />
+          </div>
+          <div class="popup__text">
+            <h4 class="popup__title"></h4>
+            <p class="justify-text popup__description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="video hidden" id="videoContainer">
       <p class="video__close" id="closeVideo">Cerrar X</p>
       <video id="videoSource" width="600" height="320" controls>
@@ -63,7 +83,7 @@
                   <a class="nav-menu__link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="ingresar.html">Ingresar</a>
+                  <a class="nav-menu__link" href="login.html">Ingresar</a>
                 </li>
                 <li class="nav-menu__item">
                   <a class="nav-menu__link hilight" href="cotizador.html"
@@ -332,22 +352,30 @@
             <img
               class="certification__item"
               src="img/iso-27001.jpg"
-              alt="Logotipo certifiación Iso 27001"
+              alt="Logotipo certifiación Iso 27001:2013"
+              data-title="Certificación ISO 27001:2013"
+              data-content="Especifica los requisitos necesarios para establecer, implantar, mantener y mejorar un sistema de gestión de la seguridad de la información (SGSI) según el conocido como “Ciclo de Deming”: PDCA - acrónimo de Plan, Do, Check, Act (Planificar, Hacer, Verificar, Actuar). <br><br> Es consistente con las mejores prácticas descritas en ISO/IEC 27002, anteriormente conocida como ISO/IEC 17799, con orígenes en la norma BS 7799-2:2002, desarrollada por la entidad de normalización británica, la British Standards Institution (BSI)."
             />
             <img
               class="certification__item"
               src="img/esr.jpg"
               alt="Logotipo Empresa socialmente responsable"
+              data-title="Empresa socialmente responsable"
+              data-content="Una Empresa Socialmente Responsable es la que cumple con un conjunto de normas y principios referentes a la realidad social, económica y ambiental que se basa en valores, que le ayudan a ser más productiva. <br> <br> Una Empresa Socialmente Responsable establece como principales estándares en su cultura organizacional, la ética, la moral, y todo lo que se refiere a valores."
             />
             <img
               class="certification__item"
               src="img/great-place-to-work.jpg"
               alt="Logotipo Great Place to Work"
+              data-title="Great Place To Work"
+              data-content="Great Place to Work® es la firma consultora que durante más de 30 años ha trabajado con empresas líderes de todo el mundo para identificar, crear y mantener culturas de alta confianza y alto rendimiento; todo ello alineado a nuestra misión de construir un mundo mejor, ayudando a las organizaciones a convertirse en los mejores lugares para trabajar PARA TODOS."
             />
             <img
               class="certification__item"
               src="img/iso-9001.jpg"
-              alt="Logotipo certifiación Iso 9001"
+              alt="Logotipo certifiación Iso 9001:2015"
+              data-title="Certifiación ISO 9001:2015"
+              data-content="La norma ISO 9001:2015 es el estándar internacional de carácter certificable que regula los Sistemas de Gestión de la Calidad (SGC). La serie de normas ISO 9000 promueven la adopción de un enfoque basado en procesos"
             />
           </div>
         </div>

@@ -42,10 +42,12 @@
                   >
                 </li>
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link active" href="blog.html">Blog</a>
+                  <a class="nav-menu__link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="login.html">Ingresar</a>
+                  <a class="nav-menu__link active" href="login.html"
+                    >Ingresar</a
+                  >
                 </li>
                 <li class="nav-menu__item">
                   <a class="nav-menu__link hilight" href="cotizador.html"
@@ -58,99 +60,57 @@
         </div>
       </div>
       <div class="header-page">
-        <img
-          class="header-page__arrow"
-          src="img/arrow-icon.svg"
-          alt="Icono flecha"
-        />
         <div class="ed-container s-cross-center">
           <div class="ed-item s-100 l-50">
-            <span class="header-page__category">Finanzas personales</span>
-            <h1 class="subtitle header-page__title text-green">
-              ¿Cómo abrir tu cuenta de afore si eres trabajador independiente?
-            </h1>
-            <p class="header-page__text justify-text">
-              En México, 31.2 millones de personas trabajan en la informalidad,
-              lo cual representa el 55% de los empleados en el país. Por lo que,
-              la mayoría de esta población no tiene una Administradora de Fondos
-              para el Retiro (AFORE).
-            </p>
+            <h1 class="subtitle header-page__title">Bienvenido</h1>
+            <form class="form" id="callMeForm" action="">
+              <div class="form__row" id="grupo__nombre">
+                <label class="form__label" for="nombre">Usuario</label>
+                <input required name="nombre" class="form__input" type="text" />
+                <p class="form__error"></p>
+              </div>
 
-            <a
-              class="btn btn--orange mt-m d-inline-block"
-              href="blog-entry.html"
-              >Leer más</a
-            >
+              <div class="form__row" id="grupo__monto">
+                <label class="form__label" for="cantidad">Contraseña</label>
+                <input required name="monto" class="form__input" type="text" />
+                <p class="form__error"></p>
+                <a
+                  style="margin-top: 10px; text-decoration: none"
+                  href="password.html"
+                  class="link"
+                  >¿Olviaste tu contraseña?</a
+                >
+              </div>
+
+              <div class="form__row form__row--start">
+                <input
+                  id="formSubmit"
+                  type="submit"
+                  value="Enviar"
+                  class="btn btn--orange"
+                />
+                <a
+                  style="margin-left: 1rem"
+                  href="crear-cuenta.html"
+                  class="btn btn--outline"
+                  >Crear cuenta</a
+                >
+                <p class="form__error" id="error-general"></p>
+              </div>
+            </form>
           </div>
           <div
-            class="ed-item s-100 l-50 l-cross-center l-main-center header-page__image header-page__image--blog"
+            class="ed-item s-100 l-50 l-cross-center l-main-center header-page__overlay header-page__overlay--blue"
           >
             <img
-              src="img/blog-header.png"
+              src="img/login-image.png"
               alt="Atrevus financiamos tu historia"
+              class="header-page__image"
             />
           </div>
         </div>
       </div>
     </header>
-
-    <section class="mt-lg">
-      <div class="ed-container">
-        <div class="ed-item s-100 m-50 l-1-3">
-          <article class="blog">
-            <div class="blog__figure">
-              <img class="blog__image" src="img/entrada-blog.jpg" alt="" />
-            </div>
-
-            <div class="blog__text">
-              <a href="" class="blog__category text-yellow">
-                Finanzas Personales
-              </a>
-              <a href="blog-entry.html" class="blog__title">
-                Atrevus dona 125 mil alimentos calientes al personal médico del
-                Sector Salud
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <div class="ed-item s-100 m-50 l-1-3">
-          <article class="blog">
-            <div class="blog__figure">
-              <img class="blog__image" src="img/entrada-blog.jpg" alt="" />
-            </div>
-
-            <div class="blog__text">
-              <a href="" class="blog__category text-yellow">
-                Finanzas Personales
-              </a>
-              <a href="blog-entry.html" class="blog__title">
-                Atrevus dona 125 mil alimentos calientes al personal médico del
-                Sector Salud
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <div class="ed-item s-100 m-50 l-1-3">
-          <article class="blog">
-            <div class="blog__figure">
-              <img class="blog__image" src="img/entrada-blog.jpg" alt="" />
-            </div>
-
-            <div class="blog__text">
-              <a href="" class="blog__category text-yellow">
-                Finanzas Personales
-              </a>
-              <a href="blog-entry.html" class="blog__title">
-                Atrevus dona 125 mil alimentos calientes al personal médico del
-                Sector Salud
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <footer class="footer">
       <div class="ed-container m-cross-start">

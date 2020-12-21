@@ -38,6 +38,15 @@
     color: $white;
     border: 0;
   }
+
+  &.btn--outline {
+    border: solid 1px $primary-color;
+    color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
 }
 
 @keyframes up-down {

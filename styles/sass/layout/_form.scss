@@ -10,6 +10,9 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.125rem;
+    &.form__row--start {
+      justify-content: flex-start;
+    }
   }
 
   & .form__label {

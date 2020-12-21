@@ -12,6 +12,34 @@ window.addEventListener("load", function () {
   // END SLIDER
   // END SLIDER
 
+  // POPUP
+  var certificaciones = document.getElementsByClassName("certification__item");
+  var popUpContainer = document.getElementById("popUpContainer");
+  var popUpIcon = document.getElementById("popUpIcon");
+  function showPopUp() {
+    popUpContainer.classList.remove("hidden");
+    let titleContainer = document.querySelector(".popup__title");
+    let imageContainer = document.querySelector(".popup__image img");
+    let title = this.getAttribute("data-title");
+    let image = this.getAttribute("src");
+    let content = this.getAttribute("data-content");
+    let contentContainer = document.querySelector(".popup__description");
+
+    imageContainer.setAttribute("src", image);
+    contentContainer.innerHTML = content;
+    titleContainer.innerHTML = title;
+  }
+
+  function closePopUp() {
+    popUpContainer.classList.add("hidden");
+  }
+
+  popUpIcon.addEventListener("click", closePopUp, false);
+  for (let index = 0; index < certificaciones.length; index++) {
+    certificaciones[index].addEventListener("click", showPopUp, false);
+  }
+  // END POPUP
+
   // Iniciar y cerrar video
   var playVideo = document.getElementById("playVideo");
   var videoContainer = document.getElementById("videoContainer");

@@ -97,6 +97,11 @@
       height: 200%;
       background-color: $text-color;
     }
+    &.header-page__overlay--blue {
+      &::before {
+        background-color: $light-blue;
+      }
+    }
   }
 
   & .header-page__title {
