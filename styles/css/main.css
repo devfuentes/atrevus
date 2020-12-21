@@ -7559,6 +7559,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 0;
 }
 .testimonials .testimonial__image {
   width: 40%;
@@ -7574,6 +7575,7 @@ h6 {
   color: #f38723;
   line-height: calc(1em + 5px);
   margin-bottom: 0;
+  font-size: 0.9rem;
 }
 .testimonials .testimonial__author {
   font-size: 0.75rem;

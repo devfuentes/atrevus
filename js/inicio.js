@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    dots: true,
+    dots: false,
     pauseOnHover: true,
   });
   // END SLIDER
@@ -16,15 +16,25 @@ window.addEventListener("load", function () {
   var playVideo = document.getElementById("playVideo");
   var videoContainer = document.getElementById("videoContainer");
   var closeVideo = document.getElementById("closeVideo");
+  var videoSource = document.getElementById("videoSource");
+  var testomonialPlay = document.getElementsByClassName("testimonial__btn");
+
+  for (let index = 0; index < testomonialPlay.length; index++) {
+    testomonialPlay[index].addEventListener("click", initVideo, false);
+  }
 
   function initVideo(e) {
     e.preventDefault();
+    let videoUrl = this.getAttribute("data-video");
+    console.log(this);
+    videoSource.setAttribute("src", videoUrl);
     videoContainer.classList.remove("hidden");
   }
 
   function stopVideo(e) {
     e.preventDefault();
     videoContainer.classList.add("hidden");
+    videoSource.setAttribute("src", "");
   }
   playVideo.addEventListener("click", initVideo, false);
   closeVideo.addEventListener("click", stopVideo, false);
