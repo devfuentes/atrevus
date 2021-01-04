@@ -28,7 +28,9 @@
   }
 
   & .footer__header {
-    min-height: 55px;
     margin-bottom: 1rem;
+    @include response-min($l){
+      min-height: 55px;
+    }
   }
 }

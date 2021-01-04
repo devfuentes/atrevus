@@ -101,6 +101,29 @@
       &::before {
         background-color: $light-blue;
       }
+      &::after{
+        content: "";
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+      }
+    }
+
+    
+  }
+
+  & .header-page__overlay--dots{
+    position: relative;
+    &::after{
+      content:"";
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      z-index: 1000;
     }
   }
 

@@ -7325,8 +7325,12 @@ h6 {
   margin-bottom: 1rem;
 }
 .footer .footer__header {
-  min-height: 55px;
   margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .footer .footer__header {
+    min-height: 55px;
+  }
 }
 
 .form {
