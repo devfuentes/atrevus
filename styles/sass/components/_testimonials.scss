@@ -6,6 +6,7 @@
 
   .testimonials__title {
     width: 80%;
+    
   }
 
   & .testimonial {
@@ -13,11 +14,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     padding: 1.5rem 0;
+    @include response-min($l) {
+      flex-direction: row;
+    }
   }
 
   & .testimonial__image {
-    width: 40%;
+    
+    width: 80%;
+    margin-bottom: 1rem;
+    @include response-min($l) {
+      width: 40%;
+      margin-bottom: 0;
+    }
     img {
       width: 100%;
       border-radius: 100%;
@@ -25,7 +36,10 @@
   }
 
   & .testimonial__content {
-    width: 55%;
+    width: 100%;
+    @include response-min($l) {
+      width: 55%;
+    }
   }
 
   & .testimonial__quote {

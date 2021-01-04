@@ -4,9 +4,19 @@
   padding: 2.25rem 0;
   border-radius: 0.5rem;
 
+  & .cotizador-form{
+    margin-top: 1.5rem;
+    @include response-min($l) {
+      margin-top: 0;
+    }
+  } 
+
   & .cotizador__content,
   & .cotizador-form {
-    width: 75%;
+    width: 100%;
+    @include response-min($l) {
+      width: 75%;
+    }
   }
 
   & .cotizador-form__input,

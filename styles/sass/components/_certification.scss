@@ -2,7 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @include response-min($l) {
+    flex-wrap: nowrap;
+  }
   & .certification__item {
     cursor: pointer;
+    width: 45%;
+    @include response-min($l) {
+      width: 15%;
+    }
   }
 }

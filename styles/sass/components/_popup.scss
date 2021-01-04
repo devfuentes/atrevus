@@ -7,11 +7,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
   & .popup__container {
     width: 80%;
     height: 80vh;
     background-color: $white;
     padding: 2rem;
+    overflow: auto;
   }
 
   & .popup__header {
@@ -25,13 +27,33 @@
   & .popup__content {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    @include response-min($l) {
+      flex-direction: row;
+    }
   }
 
   & .popup__image {
-    width: 20%;
+    width: 100%;
+    
+    @include response-min($l) {
+     width: 20%;
+    }
+  }
+
+  & .popup__img{
+    display: block;
+    margin: 0 auto;
+  }
+
+  & .popup__description{
+    overflow: scroll;
   }
 
   & .popup__text {
-    width: 70%;
+    width: 100%;
+    @include response-min($l) {
+      width: 70%;
+     }
   }
 }

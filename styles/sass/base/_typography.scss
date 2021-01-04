@@ -5,6 +5,7 @@ body {
   font-family: $primary-font;
   font-weight: $light-font;
   color: $text-color;
+  overflow-x: hidden;
 }
 p {
   line-height: calc(1rem + 0.5rem);

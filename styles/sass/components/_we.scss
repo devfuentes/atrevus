@@ -5,17 +5,30 @@
   }
 
   & .we__image {
-    height: 100%;
+    height: auto;
+    width: 100%;
+    @include response-min($l) {
+      height: 100%;
+    }
   }
 
   & .we__article {
-    max-width: 70%;
+    max-width: 100%;
+    @include response-min($l) {
+      max-width: 70%;
+    }
   }
 
   & .we__title {
-    max-width: 50%;
+    max-width: 90%;
+    margin-top: 1rem;
+    @include response-min($l) {
+      max-width: 50%;
+    }
     &.we__title--sm {
-      max-width: 40%;
+      @include response-min($l) {
+        max-width: 40%;
+      }
     }
   }
 }

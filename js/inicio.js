@@ -12,6 +12,23 @@ window.addEventListener("load", function () {
   // END SLIDER
   // END SLIDER
 
+  // NAV MOBILE
+  var btnMobile = document.getElementById("navMobileIcon");
+  var closeMobile = document.getElementById("navMobileClose");
+  function openMenu(){
+    let menuContainer = document.getElementById("navMobile");
+    menuContainer.style.display="flex";
+
+  }
+  function closeMenu(){
+    let menuContainer = document.getElementById("navMobile");
+    menuContainer.style.display="none";
+
+  }
+  btnMobile.addEventListener("click",openMenu,false);
+  closeMobile.addEventListener("click",closeMenu,false);
+  // END NAV MOBILE
+
   // POPUP
   var certificaciones = document.getElementsByClassName("certification__item");
   var popUpContainer = document.getElementById("popUpContainer");
