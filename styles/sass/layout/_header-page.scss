@@ -1,8 +1,11 @@
 .header-page {
   background-color: $main-background;
-  padding: 3.75rem 0;
+  padding: 1.75rem 0;
   overflow: hidden;
   position: relative;
+  @include response-min($l){
+    padding: 3.75rem 0;
+  }
 
   & .header-page__category {
     color: $yellow-color;
@@ -19,7 +22,10 @@
     animation: scroll infinite 1s ease-in-out;
   }
 
-  & .header-page__image {
+  & .header-page__image--circle {
+    border-radius: 100%;
+    max-width: 400px;
+    width: 100%;
     z-index: 1;
   }
 
@@ -94,20 +100,19 @@
       top: 50%;
       left: 80%;
       width: 100%;
-      height: 200%;
+      height: 130%;
       background-color: $text-color;
+      margin-top: 2rem;
+      @include response-min($l){
+        margin-top: 0;
+        height: 200%;
+      }
     }
     &.header-page__overlay--blue {
       &::before {
         background-color: $light-blue;
       }
-      &::after{
-        content: "";
-        width: 200px;
-        height: 200px;
-        background-color: red;
-        position: absolute;
-      }
+      
     }
 
     
@@ -117,13 +122,21 @@
     position: relative;
     &::after{
       content:"";
-      width: 200px;
-      height: 200px;
-      background-color: red;
+      width: 150px;
+      height: 150px;
+      background-image: url(../../img/pattern-dots.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       position: absolute;
-      top: 0%;
-      left: 50%;
-      z-index: 1000;
+      bottom: 0%;
+      left: 60%;
+      z-index: 2;
+      @include response-min($l){
+        width: 200px;
+        height: 200px;
+      }
+      
     }
   }
 
