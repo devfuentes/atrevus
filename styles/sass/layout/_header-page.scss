@@ -48,6 +48,10 @@
 
   & .header-page__image {
     position: relative;
+    margin-top: 1.5rem;
+    @include response-min($l){
+      margin-top: 0;
+    }
     &::before,
     &::after {
       content: "";
@@ -76,6 +80,20 @@
       }
       &::after {
         background-image: url(../../img/blog-icon2.svg);
+      }
+    }
+
+    // VARIACION PARA PAGINA NOSOTROS
+    &.header-page__image--nosotros {
+      &::before {
+        background-image: url(../../img/nosotros-arrow.svg);
+        display: none;
+        @include response-min($l){
+          display: initial;
+        }
+      }
+      &::after {
+        background-image: url(../../img/nosotros-square.svg);
       }
     }
 

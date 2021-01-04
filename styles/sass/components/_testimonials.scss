@@ -3,6 +3,17 @@
   width: 100%;
   padding: 2.25rem 0;
   color: $white;
+  &.testimonials--blue{
+    background-color: $light-blue;
+    color: $text-color;
+    .slick-next, .slick-prev{
+      color: $text-color;
+    }
+    .testimonials__title {
+      color: $text-color;
+      
+    }
+  }
 
   .testimonials__title {
     width: 80%;

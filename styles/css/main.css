@@ -6968,7 +6968,7 @@ h6 {
 }
 
 .title {
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   .title {
@@ -7242,6 +7242,12 @@ h6 {
 }
 .header-page .header-page__image {
   position: relative;
+  margin-top: 1.5rem;
+}
+@media only screen and (min-width: 1024px) {
+  .header-page .header-page__image {
+    margin-top: 0;
+  }
 }
 .header-page .header-page__image::before, .header-page .header-page__image::after {
   content: "";
@@ -7267,6 +7273,18 @@ h6 {
 }
 .header-page .header-page__image.header-page__image--blog::after {
   background-image: url(../../img/blog-icon2.svg);
+}
+.header-page .header-page__image.header-page__image--nosotros::before {
+  background-image: url(../../img/nosotros-arrow.svg);
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .header-page .header-page__image.header-page__image--nosotros::before {
+    display: initial;
+  }
+}
+.header-page .header-page__image.header-page__image--nosotros::after {
+  background-image: url(../../img/nosotros-square.svg);
 }
 .header-page .header-page__image.header-page__image--cotizador::before {
   display: none;
@@ -7747,6 +7765,16 @@ h6 {
   width: 100%;
   padding: 2.25rem 0;
   color: #fff;
+}
+.testimonials.testimonials--blue {
+  background-color: #99cbe3;
+  color: #283b49;
+}
+.testimonials.testimonials--blue .slick-next, .testimonials.testimonials--blue .slick-prev {
+  color: #283b49;
+}
+.testimonials.testimonials--blue .testimonials__title {
+  color: #283b49;
 }
 .testimonials .testimonials__title {
   width: 80%;

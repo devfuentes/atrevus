@@ -6,28 +6,75 @@
     <title>Atrevus | Financiamos tu historia</title>
     <link rel="stylesheet" href="styles/css/main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ipr3lsk.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <div class="navMobile" id="navMobile">
+      <div class="navMobile-container">
+        <p class="navMobile__cerrar" id="navMobileClose">
+          Cerrar X
+        </p>
+        <img class="navMobile-container__image" src="img/logo-atrevus-white.svg" alt="">
+        <div class="navMobile-menu">
+          <ul class="navMobile-menu__list">
+            <li class="navMobile__item"><a href="index.html">Inicio</a></li>
+            <li class="navMobile__item"><a href="nosotros.html">Nosotros</a></li>
+            <li class="navMobile__item"><a href="#">Productos</a>
+              <ul class="navMobile-menu--submenu">
+                <li class="navMobile__item"><a href="credito-personal.html">Crédito personal</a></li>
+                <li class="navMobile__item"><a href="credito-empresarial.html">Crédito empresarial</a></li>
+              </ul>
+            </li>
+            <li class="navMobile__item"><a href="sustentabilidad.html">Sustentabilidad</a></li>
+            <li class="navMobile__item"><a href="blog.html">Blog</a></li>
+            <li class="navMobile__item"><a href="login.html">Ingresar</a></li>
+            <li class="navMobile__item"><a href="cotizador.html">Cotizador</a></li>
+          </ul>
+          <div class="navMobile-social">
+            <a href="https://www.facebook.com/AtrevusMx">
+              <img src="img/facebook.svg" alt="icono Facebook">
+            </a>
+            <a href="https://mx.linkedin.com/company/atrevusmx">
+              <img src="img/linkedin.svg" alt="Icono Linkedin">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="nav">
         <div class="ed-container s-cross-center">
-          <div class="ed-item s-30">
+          <div class="ed-item s-50 m-20">
             <img
               src="img/logo-atrevus.svg"
               alt="Logotipo Atrevus"
               class="nav__image"
             />
           </div>
-          <div class="ed-item s-70 s-main-end">
+          <div class="ed-item s-50 m-80 s-main-end">
+            <div class="nav-icon" id="navMobileIcon">
+              <span class="nav-icon__line"></span>
+              <span class="nav-icon__line"></span>
+              <span class="nav-icon__line"></span>
+            </div>
             <nav class="nav-menu">
               <ul class="nav-menu__list">
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="index.html">Inicio</a>
+                  <a class="nav-menu__link active" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link active" href="nosotros.html"
-                    >Nosotros</a
-                  >
+                  <a class="nav-menu__link" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-menu__item nav-menu__item-submenu">
                   <a class="nav-menu__link nav-menu__link--submenu" href=""
@@ -45,6 +92,9 @@
                 </li>
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="contacto.html">Contacto</a>
                 </li>
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="login.html">Ingresar</a>
@@ -80,10 +130,11 @@
             </p>
             <a class="link link--arrow" href="#nosotros">Conoce más</a>
           </div>
-          <div class="ed-item s-100 l-50 l-cross-center l-main-center">
+          <div class="ed-item s-100 l-50 s-cross-center s-main-center header-page__image header-page__image--nosotros">
             <img
-              src="img/nosotros-header.png"
+              src="img/nosotros-image.jpg"
               alt="Atrevus financiamos tu historia"
+              class="header-page__image--circle"
             />
           </div>
         </div>
@@ -199,6 +250,167 @@
       </div>
     </section>
 
+    <section class="testimonials testimonials--blue mb-0">
+      <div class="ed-container">
+        <div class="ed-item s-100 l-50 l-cross-center">
+          <h3 class="subtitle text-green testimonials__title">
+            Sueños que se materializaron gracias a Atrevus:
+          </h3>
+          <p class="justify-text">
+            Sabemos que los tiempos son difíciles, pero en Atrevus siempre te
+            brindaremos una solución y el apoyo que tu empresa necesita tanto en
+            momentos de estabilidad, como en momentos de crisis. Atrévete a
+            cumplir tus sueños; nosotros financiamos tu historia.
+          </p>
+        </div>
+        <div class="ed-item s-100 l-50">
+          <div class="testimonial-slider">
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/flising.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "ATREVUS fue una de las primeras empresas que confiraron en
+                    nostros, ellos nos abrieron las puertas dandonos las
+                    primeras lineas de crédito para la adquisición de los
+                    primeros activos que arrendamos."
+                  </h4>
+                  <p class="testimonial__author">Victor Villagómez</p>
+                  <p class="testimonial__company">Flising</p>
+                  <a
+                    href=""
+                    data-video="video/flising.mp4"
+                    class="testimonial__btn btn btn--orange"
+                  >
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/cosmito.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "ATREVUS me ha acompañado en mi sueño desde el primer
+                    momento en que yo se lo platiqué lo hicieron suyo y
+                    rápidamente vinieron a campo a ver las necesidades del
+                    proyecto y fue así como me ayudaron a hacerlo posible."
+                  </h4>
+                  <p class="testimonial__author">Cosme Castro</p>
+                  <p class="testimonial__company">El cosmito</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/crossfit.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "ATREVUS ha sido una parte importantísima, ya que ellos nos
+                    ayudaron a poder crear esto, hoy somos el crossfit más
+                    grande de la CDMX y Atrevus nos ayudó desde cero y en la
+                    construcción."
+                  </h4>
+                  <p class="testimonial__author">Edgar Ramos</p>
+                  <p class="testimonial__company">Crossfit Luther</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/flores-mariana.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "ATREVUS ha sido un respaldo económico, primero nos
+                    ofrecieron el apoyo para comprar fertilizantes y hemos
+                    mantenido una excelente relación en cuestión de compromiso.
+                    Ahora estamos a punto de entrar al mercado Norteamericano."
+                  </h4>
+                  <p class="testimonial__author">José Díaz</p>
+                  <p class="testimonial__company">Flores Mariana</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img
+                    src="img/muebles-hidalgo.jpg"
+                    alt="Testiminial Atrevus Flising"
+                  />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    "ATREVUS nos ha ayudado infinitamente a comprar maquinaria,
+                    al poder financiarnos para realizar la estructura que
+                    tenemos"
+                  </h4>
+                  <p class="testimonial__author">Mauricio Hidalgo</p>
+                  <p class="testimonial__company">Diseños y cocinas Hidalgo</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial">
+                <div class="testimonial__image">
+                  <img src="img/u3.jpg" alt="Testiminial Atrevus Flising" />
+                </div>
+                <div class="testimonial__content">
+                  <h4 class="testimonial__quote justify-text">
+                    ATREVUS nos ayudó a acelerar nuestro sueño y a
+                    materializarlo. En este momento ya somos una clínica
+                    altamente funcional.
+                  </h4>
+                  <p class="testimonial__author">Wendy Alba</p>
+                  <p class="testimonial__company">U3</p>
+                  <a href="" class="testimonial__btn btn btn--orange">
+                    Ver testimonial</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="ed-container m-cross-start">
         <div class="ed-item m-25">
@@ -258,5 +470,15 @@
       </div>
     </footer>
   </body>
-  <script src="js/main.js"></script>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+    ></script>
+  <script src="js/inicio.js"></script>
 </html>
