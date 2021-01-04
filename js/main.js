@@ -25,4 +25,21 @@ window.addEventListener("load", function () {
   for (let i = 0; i < date.length; i++) {
     date[i].addEventListener("click", showTimeline, false);
   }
+
+  // NAV MOBILE
+  var btnMobile = document.getElementById("navMobileIcon");
+  var closeMobile = document.getElementById("navMobileClose");
+  function openMenu(){
+    let menuContainer = document.getElementById("navMobile");
+    menuContainer.style.display="flex";
+
+  }
+  function closeMenu(){
+    let menuContainer = document.getElementById("navMobile");
+    menuContainer.style.display="none";
+
+  }
+  btnMobile.addEventListener("click",openMenu,false);
+  closeMobile.addEventListener("click",closeMenu,false);
+  // END NAV MOBILE
 });
