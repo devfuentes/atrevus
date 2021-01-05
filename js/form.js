@@ -3,6 +3,9 @@
   // import pdfMake from "pdfmake/build/pdfmake";
   var persona = null;
   const MAX_MONTH = 120;
+  const EMAIL = "ivanfuentesglez@gmail.com";
+  const EMAIL_SEND = "ivan@devfuentes.com";
+  const TOKEN = "8bd4cc60-d0d3-4924-b004-0869e1e4a35f";
   var credito = "0";
   var cards = document.getElementsByClassName("form-card");
   var formulario = document.getElementById("form");
@@ -30,9 +33,11 @@
   callMe.addEventListener("click", showContact, false);
 
   var inputs = document.querySelectorAll("#form input");
+  var inputsCallme = document.querySelectorAll("#callMeForm input");
   const API =
     "https://atrevuscreditdev.sgawebservices.net/SimuladorClienteJson/";
   var btnEnviar = document.getElementById("formSubmit");
+  
   var expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -45,7 +50,12 @@
     nombre: false,
     monto: false,
     plazo: false,
+    razon: false,
+    correo: false,
+    telefono: false,
+    privacidad: false
   };
+
 
   // Funcion para crear PDF
 
@@ -470,9 +480,57 @@
     }
   }
 
+  function validarFormularioCallMe(e) {
+    switch (e.target.name) {
+      case "razon":
+        validarCampo(
+          expresiones.nombre,
+          e.target,
+          "razon",
+          "Ingresa tu nombre.",
+          "El nombre solo puede contener letras."
+        );
+        break;
+
+      case "telefono":
+        validarCampo(
+          expresiones.monto,
+          e.target,
+          "telefono",
+          "Ingresa tu teléfono.",
+          "El teléfono solo puede contener numeros"
+        );
+        break;
+
+      case "correo":
+        validarCampo(
+          expresiones.correo,
+          e.target,
+          "correo",
+          "Ingresa tu correo electrónico.",
+          "Ingresa un correo electrónico válido"
+        );
+
+       
+        break;
+
+        case "privacidad":
+          // Validar si el checkbox esta checked 
+        break;
+
+      default:
+        break;
+    }
+  }
+
   inputs.forEach(function (input) {
     input.addEventListener("keyup", validarFormulario);
     input.addEventListener("blur", validarFormulario);
+  });
+
+  inputsCallme.forEach(function (input) {
+    input.addEventListener("keyup", validarFormularioCallMe);
+    input.addEventListener("blur", validarFormularioCallMe);
   });
 
   form.addEventListener("submit", function (e) {
@@ -554,4 +612,56 @@
         "Completa los campos obligatorios *";
     }
   });
+
+  callMeForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let privacidad = document.getElementById("privacidad");
+    console.log(privacidad.checked);
+    // Validando que el checkbox ha sido seleccionado
+
+    if(privacidad.checked){
+      campos.privacidad = true;
+    }else{
+      campos.privacidad = false;
+    }
+
+    // Funcion para enviar email
+    function sendEmail(formulario) {
+      formData = new FormData(formulario);
+      
+      let nombre = formData.get("razon");
+      let telefono = formData.get("nombre");
+      let correo = formData.get("monto");
+
+      Email.send({
+        SecureToken : TOKEN,
+        To : EMAIL,
+        From : EMAIL_SEND,
+        Subject : `Prospecto cotizador sitio web ${nombre}`,
+        Body : `Datos del cliente: <br> Nombre: ${nombre} <br> Teléfono: ${telefono} <br> Correo: ${correo}`
+      }).then(
+        message => alert(message)
+        
+      );
+      alert("MANDANDO CORREO");
+    }
+
+
+    if (campos.razon && campos.telefono && campos.correo && campos.privacidad) {
+      
+      // ENVIAR DATOS
+      let btnEnviar = document.getElementById("callMeSubmit");
+      btnEnviar.value = "Enviando ...";
+      btnEnviar.classList.add("form__input-submit--loading");
+      document.getElementById("error-general-callme").innerHTML = "";
+      sendEmail(callMeForm);
+      // ENVIADO DATOS A LA URL DE PRUEBA
+    } else {
+      //MANDAR MENSAJE DE ERROR
+      document.getElementById("error-general-callme").innerHTML =
+        "Completa los campos obligatorios *";
+    }
+  });
+
+
 })();
