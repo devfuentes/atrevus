@@ -110,14 +110,24 @@
               <input checked="true" id="radioPersonal" type="radio" name="tipoCredito" value="1" class="hidden">
               <input id="radioEmpresarial" type="radio" name="tipoCredito" value="2" class="hidden">
               <div class="form__row">
-                <label class="form-card form-card--active" for="radioPersonal">
-                  <img class="form-card__image" src="img/user.svg" alt="Icono usuario credito personal">
-                  <p class="form-card__title">Crédito personal</p>
-                </label>
-                <label class="form-card" for="radioEmpresarial">
-                  <img class="form-card__image" src="img/icon-empresarial.svg" alt="Icono credito empresarial">
-                  <p class="form-card__title">Crédito empresarial</p>
-                </label>
+                <div class="form__item">
+                  <label class="form-card form-card--active" for="radioPersonal">
+                    <img class="form-card__image" src="img/user.svg" alt="Icono usuario credito personal">
+                    <p class="form-card__title">Crédito personal</p>
+                  </label>
+                  <p class="form__information">Para Persona Física</p>
+                </div>
+
+                <div class="form__item">
+                  <label class="form-card" for="radioEmpresarial">
+                    <img class="form-card__image" src="img/icon-empresarial.svg" alt="Icono credito empresarial">
+                    <p class="form-card__title">Crédito empresarial</p>
+                  </label>
+                  <p class="form__information">Para Persona Moral</p>
+                </div>
+                
+                
+                
               </div>
 
               <div class="form__row" id="grupo__nombre">

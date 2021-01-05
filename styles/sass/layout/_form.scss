@@ -39,10 +39,40 @@
   & .form__input-submit--loading {
     animation: loading infinite 1s ease-in;
   }
+
+  & .form__item{
+    width: 49%;
+  }
+
+  & .form__information{
+    font-size: 0.8rem;
+    margin:0.5rem 0 0 0;
+    padding-left: 1.2rem;
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0.8rem;
+      height: 0.8rem;
+      background-image: url(../../img/info-icon.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+  }
+
+  
 }
 
+
+
 .form-card {
-  width: 49%;
+  width: 100%;
   border-radius: 15px;
   padding: 1rem 0.5rem;
   background: $white;
