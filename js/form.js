@@ -2,6 +2,7 @@
 (function () {
   // import pdfMake from "pdfmake/build/pdfmake";
   var persona = null;
+  const MAX_MONTH = 120;
   var credito = "0";
   var cards = document.getElementsByClassName("form-card");
   var formulario = document.getElementById("form");
@@ -451,6 +452,17 @@
           "Ingresa el plazo.",
           "El plazo solo puede contener numeros"
         );
+
+        // VALIDACION DE MESES MAXIMOS
+
+        // console.log(e.target.value);
+        if(e.target.value > MAX_MONTH){
+          let error = document.querySelector("#grupo__plazo .form__error");
+          error.innerHTML = "El plazo máximo es de 120 meses.";
+          campos.plazo = false;
+          console.log(campos.plazo);
+          
+        }
         break;
 
       default:
