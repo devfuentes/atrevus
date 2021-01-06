@@ -82,13 +82,13 @@
                   <a class="nav-menu__link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="contacto.html">Contacto</a>
+                  <a class="nav-menu__link active" href="contacto.html">Contacto</a>
                 </li>
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="login.html">Ingresar</a>
                 </li>
                 <li class="nav-menu__item">
-                  <a class="nav-menu__link hilight active" href="cotizador.html"
+                  <a class="nav-menu__link hilight" href="cotizador.html"
                     >Cotizador</a
                   >
                 </li>
@@ -102,49 +102,35 @@
         <div class="ed-container s-cross-center">
           <div class="ed-item s-100 l-50">
             
-            <h1 class="subtitle header-page__title text-green">
-              Calcula tu crédito
+            <h1 class="subtitle header-page__title">
+              Contacto
             </h1>
 
             <form class="form" id="form" action="">
-              <input checked="true" id="radioPersonal" type="radio" name="tipoCredito" value="1" class="hidden">
-              <input id="radioEmpresarial" type="radio" name="tipoCredito" value="2" class="hidden">
-              <div class="form__row">
-                <div class="form__item">
-                  <label class="form-card form-card--active" for="radioPersonal">
-                    <img class="form-card__image" src="img/user.svg" alt="Icono usuario credito personal">
-                    <p class="form-card__title">Crédito personal</p>
-                  </label>
-                  <p class="form__information">Para Persona Física</p>
-                </div>
-
-                <div class="form__item">
-                  <label class="form-card" for="radioEmpresarial">
-                    <img class="form-card__image" src="img/icon-empresarial.svg" alt="Icono credito empresarial">
-                    <p class="form-card__title">Crédito empresarial</p>
-                  </label>
-                  <p class="form__information">Para Persona Moral</p>
-                </div>
-                
-                
-                
-              </div>
-
+              
               <div class="form__row" id="grupo__nombre">
-                <label class="form__label" for="nombre">Nombre o razón social *</label>
+                <label class="form__label" for="nombre">Nombre completo *</label>
                 <input required name="nombre" class="form__input" type="text">
                 <p class="form__error"></p>
               </div>
 
               <div class="form__row" id="grupo__monto">
-                <label class="form__label" for="cantidad">¿Cuánto necesitas? *</label>
-                <input required name="monto" class="form__input" type="text">
-                <p class="form__error"></p>
+                <div class="form__item">
+                  <label class="form__label" for="cantidad">Correo electrónico *</label>
+                  <input required name="monto" class="form__input" type="text">
+                  <p class="form__error"></p>
+                </div>
+                <div class="form__item">
+                  <label class="form__label" for="cantidad">Teléfono*</label>
+                  <input required name="monto" class="form__input" type="text">
+                  <p class="form__error"></p>
+                </div>
               </div>
 
               <div class="form__row" id="grupo__plazo">
-                <label class="form__label" for="plazo">¿En cuántos meses quieres pagarlo? *</label>
-                <input required required name="plazo" class="form__input" type="text" placeholder="">
+                <label class="form__label" for="plazo">Mensaje</label>
+                <textarea cols="30" required  name="plazo" class="form__input" type="text" placeholder="">
+                </textarea>
                 <p class="form__error"></p>
 
               </div>
@@ -156,98 +142,13 @@
               
             </form>
 
-            <div class="cotizador-response hidden" id="cotizadorResponse">
-              <div class="cotizador-response__header">
-                <p class="cotizador-response__title">Pago mensual</p>
-                <h2 class="cotizador-response__monto text-green" id="pagoMensual">$2, 858.00 M.N</h2>
-              </div>
-
-              <div class="cotizador-response__values">
-                <div class="cotizador-response__item">
-                  <p class="cotizador-response__heading">
-                    Plazos
-                  </p>
-                  <p class="cotizador-response__value" id="plazos">
-                    
-                  </p>
-                </div>
-                <div class="cotizador-response__item">
-                  <p class="cotizador-response__heading" >
-                    IVA
-                  </p>
-                  <p class="cotizador-response__value" id="iva">
-                    16%
-                  </p>
-                </div>
-                <div class="cotizador-response__item">
-                  <p class="cotizador-response__heading">
-                    CAT
-                  </p>
-                  <p class="cotizador-response__value" id="cat">
-                    
-                  </p>
-                </div>
-                <div class="cotizador-response__item">
-                  <p class="cotizador-response__heading">
-                    Tasa de interés
-                  </p>
-                  <p class="cotizador-response__value" id="tasa">
-                    
-                  </p>
-                </div>
-              </div>
-
-              <div class="cotizador-response__cta">
-                <a class="btn btn--orange" href="#" id="callMe">
-                  Quiero que me llamen
-                </a>
-                <a class="link" href="#" id="download">
-                  Ver tabla de amortizacion
-                </a>
-
-              </div>
-            </div>
-
-            <form class="form hidden" id="callMeForm" action="">
-             
-
-              <div class="form__row" id="grupo__razon">
-                <label class="form__label" for="razon">Nombre*</label>
-                <input required name="razon" class="form__input" type="text">
-                <p class="form__error"></p>
-              </div>
-
-              <div class="form__row" id="grupo__telefono">
-                <label class="form__label" for="telefono">Teléfono*</label>
-                <input required name="telefono" class="form__input" type="text">
-                <p class="form__error"></p>
-              </div>
-
-              <div class="form__row" id="grupo__correo">
-                <label class="form__label" for="correo">Correo electrónico*</label>
-                <input required name="correo" class="form__input" type="text" placeholder="">
-                <p class="form__error"></p>
-
-              </div>
-
-              <div class="form__row" id="grupo__privacidad">
-                <label><input name="privacidad" type="checkbox" id="privacidad" value="privacidad"> He leído y acepto el <a href="#" class="link">aviso de privacidad</a>*</label><br>
-                <p class="form__error"></p>
-              </div>
-
-              <div class="form__row">
-                <input id="callMeSubmit" type="submit" value="Enviar" class="btn btn--orange">
-                <p class="form__error" id="error-general-callme"></p>
-              </div>
-              
-            </form>
-            
+      
           </div>
           <div
             class="ed-item s-100 l-50 l-cross-center l-main-center header-page__image header-page__image--cotizador"
           >
             <img
-              src="img/cotizador.jpg"
+              src="img/contacto.jpg"
               alt="Atrevus financiamos tu historia"
               class="header-page__image--circle"
             />
@@ -257,6 +158,34 @@
     </header>
 
 
+    </section>
+
+    <section class="contact mb-0">
+      <div class="ed-container l-cross-center">
+        <div class="ed-item s-100 l-50">
+          <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15065.673445264953!2d-99.6229442!3d19.2641646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53209ee5938246e1!2sAtrevus!5e0!3m2!1ses-419!2smx!4v1609960180592!5m2!1ses-419!2smx" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="ed-item s-100 l-50">
+          <div class="contact__content">
+            <h2 class="subtitle">Dirección</h2>
+            <p>
+              Torre Zero / Juárez Nte. 1001 <br>
+              Piso 8 Interior 801 <br>
+              Col. San Francisco Coaxusco <br>
+              Metepec, Estado de México
+            </p>
+            <a href="tel:7222803395" class="link"> Tel. 722 280 3395</a>
+          </div>
+          <div class="contact__social">
+            <a href="https://www.facebook.com/AtrevusMx">
+              <img src="img/facebook-blue.svg" alt="Logo Facebook">
+            </a>
+            <a href="https://mx.linkedin.com/company/atrevusmx">
+              <img src="img/linkedin-blue.svg" alt="Logo linkedin">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">

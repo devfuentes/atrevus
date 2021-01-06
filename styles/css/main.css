@@ -7507,6 +7507,32 @@ h6 {
     opacity: 1;
   }
 }
+.contact {
+  background-color: #99cbe3;
+}
+.contact .contact__map {
+  width: 100%;
+  height: 500px;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .contact .contact__map {
+    margin: 0;
+  }
+}
+.contact .contact__social {
+  margin: 1.5rem 0;
+}
+@media only screen and (min-width: 1024px) {
+  .contact .contact__social {
+    margin-bottom: 0;
+  }
+}
+.contact .contact__social a:first-child {
+  margin-right: 0.5rem;
+}
+
 .we.we--black {
   background-color: #283b49;
   color: #fff;
