@@ -2,6 +2,7 @@
 (function () {
   // import pdfMake from "pdfmake/build/pdfmake";
   var persona = null;
+  var dataSimulacion = 0;
   const MAX_MONTH = 120;
   const EMAIL = "ivanfuentesglez@gmail.com";
   const EMAIL_SEND = "ivan@devfuentes.com";
@@ -20,6 +21,11 @@
   var cat = document.getElementById("cat");
   var tasa = document.getElementById("tasa");
 
+  // FUNCION PARA AGREGAR COMAS A LOS NUMEROS
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   // Variables quiero que me llamen
   var callMe = document.getElementById("callMe");
   var callMeForm = document.getElementById("callMeForm");
@@ -28,6 +34,14 @@
     e.preventDefault();
     cotizadorResponse.classList.add("hidden");
     callMeForm.classList.remove("hidden");
+    setName();
+  }
+
+  function setName(){
+    let nombreCotizador = document.querySelector("#grupo__nombre input").value;
+    let nombreCallMe = document.querySelector("#grupo__razon input");
+    nombreCallMe.value = nombreCotizador;
+    console.log(nombreCotizador);
   }
 
   callMe.addEventListener("click", showContact, false);
@@ -61,6 +75,7 @@
 
   function createPdf(e) {
     e.preventDefault();
+    console.log(data);
     var docDefinition = {
       content: [
         {
@@ -71,33 +86,31 @@
         {
           columns: [
             {
-              text: "\nSolicitante: \n Iván Fuentes",
+              text: `\nSolicitante: \n ${credito.Nombre}`,
             },
             {
-              text: "\nMonto solicitado: \n $10,000.00 M.N",
+              text: `\nMonto solicitado: \n $${numberWithCommas(credito.MontoCredito)} M.N`,
             },
 
             {
-              text: "\nPlazo: \n 24 meses",
+              text: `\nPlazo: \n ${NumeroPagos} meses`,
             },
-            {
-              text: "\nPago Mensual: \n $536.00 M.N",
-            },
+            
           ],
         },
         {
           columns: [
             {
-              text: "\nPago Mensual: \n $536.00 M.N \n",
+              text: `\nPago Mensual: \n $${numberWithCommas(credito.MontoPagoMensual)} M.N`,
             },
             {
-              text: "\nIVA: \n 16% \n",
+              text: `"\nIVA: \n ${credito.MontoIva}% \n"`,
             },
             {
-              text: "\nCAT: \n 28.72% \n",
+              text: `\nCAT: \n ${credito.Cat}% \n`,
             },
             {
-              text: "\nTasa de interés mensual: \n 1.8% \n",
+              text: `\nTasa de interés mensual: \n ${credito.TasaInteresOrdinarioMensual}% \n`,
             },
           ],
         },
@@ -555,7 +568,7 @@
     }
     function validateData() {
       // console.log(this.responseText);
-      let data = this.responseText;
+      data = this.responseText;
       credito = JSON.parse(data);
       console.log(credito);
 
