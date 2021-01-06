@@ -4,9 +4,9 @@
   var persona = null;
   var dataSimulacion = 0;
   const MAX_MONTH = 120;
-  const EMAIL = "ivanfuentesglez@gmail.com";
-  const EMAIL_SEND = "ivan@devfuentes.com";
-  const TOKEN = "8bd4cc60-d0d3-4924-b004-0869e1e4a35f";
+  const EMAIL = "ivan@pnrm.mx";
+  const EMAIL_SEND = "notificaciones.atrevus@gmail.com";
+  const TOKEN = "1bb185db-4515-46a3-97a9-3597da387135";
   var credito = "0";
   var cards = document.getElementsByClassName("form-card");
   var formulario = document.getElementById("form");
@@ -40,6 +40,8 @@
   function setName(){
     let nombreCotizador = document.querySelector("#grupo__nombre input").value;
     let nombreCallMe = document.querySelector("#grupo__razon input");
+    nombreCallMe.focus();
+
     nombreCallMe.value = nombreCotizador;
     console.log(nombreCotizador);
   }
@@ -410,8 +412,8 @@
       formData = new FormData(formulario);
       
       let nombre = formData.get("razon");
-      let telefono = formData.get("nombre");
-      let correo = formData.get("monto");
+      let telefono = formData.get("telefono");
+      let correo = formData.get("correo");
 
       Email.send({
         SecureToken : TOKEN,
@@ -420,10 +422,23 @@
         Subject : `Prospecto cotizador sitio web ${nombre}`,
         Body : `Datos del cliente: <br> Nombre: ${nombre} <br> Teléfono: ${telefono} <br> Correo: ${correo}`
       }).then(
-        message => alert(message)
+        message => {
+          let btnEnviar = document.getElementById("callMeSubmit");
+          let mensaje = document.getElementById("error-general-callme");
+          if (message == "OK"){
+            //ELIMINAR ANIMACION
+            
+            btnEnviar.value = "Enviar";
+            btnEnviar.classList.remove("form__input-submit--loading");
+            
+            mensaje.innerHTML = "Mensaje enviado correctamente";
+            mensaje.style.color = "#7cad14";
+          }else{
+            mensaje.innerHTML = "Error al mandar el mensaje, intenta de nuevo más tarde."
+          }
+        }
         
       );
-      alert("MANDANDO CORREO");
     }
 
 
